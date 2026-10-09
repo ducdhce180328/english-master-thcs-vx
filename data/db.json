@@ -1,0 +1,331 @@
+{
+  "submissions": [
+    {
+      "id": "sub-1",
+      "studentName": "Dương Hữu Quy",
+      "studentId": "std-cls-6a1-1",
+      "classId": "cls-6a1",
+      "className": "Lớp 6A1 - Global Success",
+      "studentGrade": 6,
+      "unitTitle": "Unit 1: My New School",
+      "topic": "Describe your new school",
+      "content": "My new school is very big and beautiful. It has 20 classrooms and a big computer room. I like my school because my teachers are very kind and friendly.",
+      "submittedAt": "2026-10-08T05:07:36.544Z",
+      "status": "graded",
+      "aiScore": {
+        "grammar": 8.5,
+        "vocab": 8,
+        "coherence": 8.5,
+        "taskCompletion": 9,
+        "overall": 8.5,
+        "feedback": "Bài viết tốt, câu văn rõ ràng, ngữ pháp cơ bản chính xác. Cần phát triển thêm một số tính từ phong phú hơn."
+      },
+      "teacherGrade": {
+        "score": 9,
+        "comment": "Bài viết mạch lạc, dùng từ đúng trọng tâm lớp 6. Thầy khen tinh thần học tập của Quy!",
+        "gradedBy": "Cô Mai Hương",
+        "gradedAt": "2026-10-08T17:07:36.544Z"
+      }
+    },
+    {
+      "id": "sub-2",
+      "studentName": "Trần Thị Bảo Ngọc",
+      "studentId": "std-cls-6a1-2",
+      "classId": "cls-6a1",
+      "className": "Lớp 6A1 - Global Success",
+      "studentGrade": 6,
+      "unitTitle": "Unit 1: My New School",
+      "topic": "My favorite subjects at school",
+      "content": "I love English and Science because they are interesting. In English class, we practice speaking with friends and listen to nice songs.",
+      "submittedAt": "2026-10-08T11:07:36.544Z",
+      "status": "graded",
+      "aiScore": {
+        "grammar": 9,
+        "vocab": 8.5,
+        "coherence": 9,
+        "taskCompletion": 9,
+        "overall": 8.9,
+        "feedback": "Ý tưởng rất thiết thực, sử dụng cấu trúc câu chuẩn xác, từ vựng phong phú."
+      },
+      "teacherGrade": {
+        "score": 9.5,
+        "comment": "Bài làm xuất sắc! Câu văn giàu cảm xúc và liên kết tốt.",
+        "gradedBy": "Cô Mai Hương",
+        "gradedAt": "2026-10-08T21:07:36.544Z"
+      }
+    },
+    {
+      "id": "sub-3",
+      "studentName": "Lê Minh Khang",
+      "studentId": "std-cls-6a1-3",
+      "classId": "cls-6a1",
+      "className": "Lớp 6A1 - Global Success",
+      "studentGrade": 6,
+      "unitTitle": "Unit 1: My New School",
+      "topic": "Describe your new school",
+      "content": "Hello everyone. My school is Greenfield School. There are three buildings and a large playground. During break time, we play football together.",
+      "submittedAt": "2026-10-08T23:07:36.544Z",
+      "status": "pending",
+      "aiScore": {
+        "grammar": 8,
+        "vocab": 8,
+        "coherence": 8,
+        "taskCompletion": 8.5,
+        "overall": 8.1,
+        "feedback": "Bài viết trôi chảy, đúng đề tài. Nên thêm một số tính từ miêu tả lớp học cụ thể hơn."
+      }
+    }
+  ],
+  "classes": [
+    {
+      "id": "cls-1791530641250",
+      "name": "Lớp 9A1",
+      "grade": 9,
+      "studentCount": 2,
+      "teacher": "Cô Nhung",
+      "code": "ENG-9A1",
+      "academicYear": "2026 - 2027",
+      "students": [
+        {
+          "id": "std-cls-1791530641250-1791530686174-9335",
+          "name": "Dương Hữu Quy",
+          "classId": "cls-1791530641250",
+          "className": "Lớp 9A1",
+          "grade": 9,
+          "rollNumber": 1,
+          "studentCode": "HS-901",
+          "gender": "male",
+          "xp": 150,
+          "streak": 1,
+          "level": 1,
+          "studyTimeMinutes": 20,
+          "completedLessonsCount": 1,
+          "averageScore": 8,
+          "lastActive": "2026-10-09T07:24:46.174Z",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+        },
+        {
+          "id": "std-cls-1791530641250-1791532576784-555",
+          "name": "Minh anh",
+          "classId": "cls-1791530641250",
+          "className": "Lớp 9A1",
+          "grade": 9,
+          "rollNumber": 2,
+          "studentCode": "HS-902",
+          "gender": "female",
+          "xp": 0,
+          "streak": 1,
+          "level": 1,
+          "studyTimeMinutes": 0,
+          "completedLessonsCount": 0,
+          "averageScore": 0,
+          "lastActive": "2026-10-09T07:56:16.784Z",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80"
+        }
+      ]
+    },
+    {
+      "id": "cls-1791535335123",
+      "name": "Lớp 7A2",
+      "grade": 7,
+      "studentCount": 1,
+      "teacher": "Cô Nhung",
+      "code": "ENG-7a2",
+      "academicYear": "2026 - 2027",
+      "students": [
+        {
+          "id": "std-cls-1791535335123-1791535506057-711",
+          "name": "Lê Minh Khang",
+          "classId": "cls-1791535335123",
+          "className": "Lớp 7A2",
+          "grade": 7,
+          "rollNumber": 1,
+          "studentCode": "HS-701",
+          "gender": "male",
+          "xp": 0,
+          "streak": 1,
+          "level": 1,
+          "studyTimeMinutes": 0,
+          "completedLessonsCount": 0,
+          "averageScore": 0,
+          "lastActive": "2026-10-09T08:45:06.058Z",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asg-1",
+      "title": "Kiểm tra 15 phút: Thì Hiện tại đơn & Tiếp diễn",
+      "grade": 6,
+      "unit": "Unit 1: My New School",
+      "dueDate": "2026-10-15",
+      "completedCount": 28,
+      "totalCount": 38,
+      "targetSkill": "Grammar & Vocabulary"
+    },
+    {
+      "id": "asg-2",
+      "title": "Viết đoạn văn 80 từ về Thói quen sống lành mạnh",
+      "grade": 7,
+      "unit": "Unit 2: Healthy Living",
+      "dueDate": "2026-10-18",
+      "completedCount": 24,
+      "totalCount": 35,
+      "targetSkill": "Writing"
+    }
+  ],
+  "customQuestions": [
+    {
+      "id": "imp-1791536031693-0",
+      "prompt": "She ___ to school every day.",
+      "type": "mcq",
+      "options": [
+        "go",
+        "goes"
+      ],
+      "correctAnswer": 1,
+      "explanationVi": "She đi với goes.",
+      "category": "Grammar",
+      "unit": 1,
+      "grade": 6
+    },
+    {
+      "id": "imp-1791536031693-1",
+      "prompt": "Students wear a school ___.",
+      "type": "mcq",
+      "options": [
+        "uniform",
+        "calculator"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "uniform = đồng phục.",
+      "category": "Vocabulary",
+      "unit": 1,
+      "grade": 6
+    },
+    {
+      "id": "imp-1791536031693-2",
+      "prompt": "When does Tom have English?",
+      "type": "mcq",
+      "options": [
+        "Monday and Friday",
+        "Tuesday and Friday"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Listening",
+      "unit": 1,
+      "grade": 6,
+      "audioPrompt": "Tom has English on Monday and Friday."
+    },
+    {
+      "id": "imp-1791536031693-3",
+      "prompt": "How does Mai go to school?",
+      "type": "mcq",
+      "options": [
+        "By bike",
+        "By bus"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Reading",
+      "unit": 1,
+      "grade": 6,
+      "passage": "Mai rides a bike to school every morning. Her favourite subject is English.",
+      "passageId": "sample-passage"
+    },
+    {
+      "id": "imp-1791536031693-4",
+      "prompt": "What is her favourite subject?",
+      "type": "mcq",
+      "options": [
+        "Maths",
+        "English"
+      ],
+      "correctAnswer": 1,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Reading",
+      "unit": 1,
+      "grade": 6,
+      "passage": "Mai rides a bike to school every morning. Her favourite subject is English.",
+      "passageId": "sample-passage"
+    },
+    {
+      "id": "imp-1791535914934-0",
+      "prompt": "She ___ to school every day.",
+      "type": "mcq",
+      "options": [
+        "go",
+        "goes"
+      ],
+      "correctAnswer": 1,
+      "explanationVi": "She đi với goes.",
+      "category": "Grammar",
+      "unit": 1,
+      "grade": 6
+    },
+    {
+      "id": "imp-1791535914935-1",
+      "prompt": "Students wear a school ___.",
+      "type": "mcq",
+      "options": [
+        "uniform",
+        "calculator"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "uniform = đồng phục.",
+      "category": "Vocabulary",
+      "unit": 1,
+      "grade": 6
+    },
+    {
+      "id": "imp-1791535914935-2",
+      "prompt": "When does Tom have English?",
+      "type": "mcq",
+      "options": [
+        "Monday and Friday",
+        "Tuesday and Friday"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Listening",
+      "unit": 1,
+      "grade": 6,
+      "audioPrompt": "Tom has English on Monday and Friday."
+    },
+    {
+      "id": "imp-1791535914935-3",
+      "prompt": "How does Mai go to school?",
+      "type": "mcq",
+      "options": [
+        "By bike",
+        "By bus"
+      ],
+      "correctAnswer": 0,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Reading",
+      "unit": 1,
+      "grade": 6,
+      "passage": "Mai rides a bike to school every morning. Her favourite subject is English.",
+      "passageId": "sample-passage"
+    },
+    {
+      "id": "imp-1791535914935-4",
+      "prompt": "What is her favourite subject?",
+      "type": "mcq",
+      "options": [
+        "Maths",
+        "English"
+      ],
+      "correctAnswer": 1,
+      "explanationVi": "Giải thích chuẩn GDPT 2018.",
+      "category": "Reading",
+      "unit": 1,
+      "grade": 6,
+      "passage": "Mai rides a bike to school every morning. Her favourite subject is English.",
+      "passageId": "sample-passage"
+    }
+  ]
+}
