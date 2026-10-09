@@ -84,7 +84,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-xs font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-md">
-                {userProfile.className || `Lớp ${activeGrade}A1`}
+                {userProfile.className || 'Chưa chọn lớp'}
               </span>
               <span className="text-xs text-slate-500">
                 STT: <strong className="text-slate-800">{userProfile.rollNumber || '01'}</strong> · Mã HS: <strong className="text-slate-800">{userProfile.studentCode || 'HS-601'}</strong>

@@ -82,11 +82,11 @@ export const ClassStudentSelectorModal: React.FC<ClassStudentSelectorModalProps>
   });
 
   const handleChooseStudent = (student: StudentRecord) => {
-    const updated = storageService.switchStudent(student);
-    if (onSelectGrade && student.grade) {
-      onSelectGrade(student.grade);
+    const selected = currentClass ? { ...student, classId: currentClass.id, className: currentClass.name, grade: currentClass.grade } : student;
+    if (onSelectGrade && selected.grade) {
+      onSelectGrade(selected.grade);
     }
-    onSelectStudent(student);
+    onSelectStudent(selected);
     onClose();
   };
 

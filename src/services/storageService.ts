@@ -81,13 +81,34 @@ export class StorageService {
       rollNumber: student.rollNumber,
       studentCode: student.studentCode,
       gender: student.gender,
-      xp: student.xp || 150,
-      streak: student.streak || 1,
-      level: student.level || 1,
-      studyTimeMinutes: student.studyTimeMinutes || 30,
+      xp: student.xp ?? 150,
+      streak: student.streak ?? 1,
+      level: student.level ?? 1,
+      studyTimeMinutes: student.studyTimeMinutes ?? 30,
       avatar: student.avatar || current.avatar
     };
     this.saveUserProfile(updated);
+    return updated;
+  }
+
+  public cacheClasses(classes: ClassRoom[]): void {
+    localStorage.setItem(STORAGE_KEYS.LOCAL_CLASSES, JSON.stringify(classes));
+    this.syncProfileWithClasses(classes);
+  }
+
+  public syncProfileWithClasses(classes: ClassRoom[]): UserProfile {
+    const profile = this.getUserProfile();
+    // Use student identity, never their display name, to locate their actual class.
+    const classroom = classes.find(cls => cls.id === profile.classId && cls.students?.some(student => student.id === profile.id))
+      || classes.find(cls => cls.students?.some(student => student.id === profile.id));
+    const student = classroom?.students?.find(student => student.id === profile.id);
+    if (!classroom || !student) return profile;
+    const updated = { ...profile, classId: classroom.id, className: classroom.name, grade: classroom.grade,
+      name: student.name, rollNumber: student.rollNumber, studentCode: student.studentCode, gender: student.gender };
+    if (JSON.stringify(updated) !== JSON.stringify(profile)) {
+      this.saveUserProfile(updated);
+      if (typeof window !== 'undefined') window.dispatchEvent(new Event('em_profile_changed'));
+    }
     return updated;
   }
 
@@ -97,7 +118,7 @@ export class StorageService {
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data.classes)) {
-          localStorage.setItem(STORAGE_KEYS.LOCAL_CLASSES, JSON.stringify(data.classes));
+          this.cacheClasses(data.classes);
           return data.classes;
         }
       }
@@ -106,7 +127,10 @@ export class StorageService {
     }
     try {
       const local = localStorage.getItem(STORAGE_KEYS.LOCAL_CLASSES);
-      if (local) return JSON.parse(local);
+      if (local) {
+        const classes = JSON.parse(local);
+        if (Array.isArray(classes)) { this.syncProfileWithClasses(classes); return classes; }
+      }
     } catch {}
     return [];
   }

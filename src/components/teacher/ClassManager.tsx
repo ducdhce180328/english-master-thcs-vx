@@ -27,6 +27,7 @@ import {
   X
 } from 'lucide-react';
 import { StudentRecord } from '../../types';
+import { storageService } from '../../services/storageService';
 
 interface TeacherProfile {
   name: string;
@@ -117,7 +118,7 @@ export const ClassManager: React.FC = () => {
       if (res.ok) {
         const data = await res.json();
         setClasses(data.classes || []);
-        localStorage.setItem('em_local_classes', JSON.stringify(data.classes || []));
+        storageService.cacheClasses(data.classes || []);
         if (data.classes && !data.classes.some((c: ClassItem) => c.id === selectedRosterClassId)) {
           setSelectedRosterClassId(data.classes[0]?.id || '');
         }
@@ -310,7 +311,7 @@ export const ClassManager: React.FC = () => {
         ? classes.map(cls => cls.id === editingClassId ? data.class : cls)
         : [...classes, data.class];
       setClasses(updatedClasses);
-      localStorage.setItem('em_local_classes', JSON.stringify(updatedClasses));
+      storageService.cacheClasses(updatedClasses);
       setSelectedRosterClassId(data.class.id);
       setShowClassModal(false);
     } catch {

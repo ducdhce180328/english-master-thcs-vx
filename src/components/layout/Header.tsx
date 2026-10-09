@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({
                     {userProfile.name}
                   </div>
                   <div className="text-[10px] text-slate-500 truncate max-w-[120px] leading-tight">
-                    {userProfile.className ? userProfile.className.split(' - ')[0] : `Lớp ${activeGrade}A1`}
+                    {userProfile.className ? userProfile.className.split(' - ')[0] : 'Chưa chọn lớp'}
                   </div>
                 </div>
                 <span className="text-[10px] font-semibold text-indigo-700 bg-indigo-100/80 group-hover:bg-indigo-600 group-hover:text-white px-1.5 py-0.5 rounded-md transition-colors">

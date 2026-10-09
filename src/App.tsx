@@ -35,6 +35,18 @@ export default function App() {
   // Class & Student Selector Modal
   const [isStudentSelectorOpen, setIsStudentSelectorOpen] = useState(false);
 
+  useEffect(() => {
+    const refreshProfile = () => {
+      const updated = storageService.getUserProfile();
+      setUserProfile({ ...updated });
+      setActiveGrade(updated.grade);
+      setActiveUnitNumber(1);
+    };
+    window.addEventListener('em_profile_changed', refreshProfile);
+    void storageService.fetchClasses();
+    return () => window.removeEventListener('em_profile_changed', refreshProfile);
+  }, []);
+
   // Sync profile grade
   const handleGradeChange = (newGrade: GradeLevel) => {
     setActiveGrade(newGrade);
